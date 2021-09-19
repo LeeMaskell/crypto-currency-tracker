@@ -1,0 +1,38 @@
+.price-estimates__input {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1rem 0;
+    background: #1c2240;
+}
+form {
+    background: #1c2240;
+}
+.input_currency {
+    display: flex;
+    background: #1c2240;
+}
+
+label {
+    padding-right: 2rem;
+    background: #1c2240;
+}
+.price-estimate__cost-display {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1rem;
+    margin-top: 2rem;
+    background: #1c2240;
+}
+.estimates__text {
+    text-align: center;
+}
+.estimates-margin {
+    margin-right: 2rem;
+}
+
+
