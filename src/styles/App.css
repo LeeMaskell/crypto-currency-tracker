@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+#root {
+  height: 100vh;
+  background-color: #141933;
+}
+/* grid design */
+.home {
+  display: grid;
+  grid-template-areas: "summary estimate modelling"
+                       "summary watchlist watchlist";
+  grid-template-rows: 2fr 1fr;
+  grid-template-columns: 40% 30% 30%;
+  width: 100%;
+  height: 100vh;
+  padding: 2%;
+}
+.market-summary {
+  grid-area: summary;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  background: #1c2240;
+  border-radius: 15px;
+  position: relative;
+}
+.market-summary::-webkit-scrollbar { 
+  display: none;
+}
+.estimates {
+  grid-area: estimate;
+  background: #1c2240;
+  border-radius: 20px;
+  margin-left: 1rem;
+}
+.modelling {
+  grid-area: modelling;
+  background: #1c2240;
+  border-radius: 20px;
+  margin-left: 1rem;
+}
+.watchlist {
+  grid-area: watchlist;
+  height: 94%;
+  border-radius: 15px;
+  width: 98%;
+  background: #1c2240;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  overflow: scroll;
+}
+.watchlist::-webkit-scrollbar {
+  display: none;
+}
+/* typography */
+h1 {
+  font-size: 1.5rem;
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 159, 96, 1) 0%,
+    rgba(252, 91, 96, 1) 50%,
+    rgba(152, 59, 125, 1) 100%
+  );
+  background-size: 100%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  text-align: center;
+}
+h2 {
+  font-size: 1.25rem;
+}
+.redh2 {
+  font-size: 1.25rem;
+  color: red;
+}
+.greenh2 {
+  font-size: 1.25rem;
+  color: green;
+}
+h4 {
+  font-size: 0.75rem;
+}
+
+.white {
+  color: white;
+}
+.flex {
+  display: flex;
+  background: #1c2240;
+}
+.inline {
+  display: inline;
+}
+.background {
+  background: #1c2240;
+}
+.padding {
+  padding-left: 2rem;
+}
+.red {
+  color: red;
+  background: #1c2240;
+  font-size: 12px;
+  text-align: left;
+}
+.green {
+  color: green;
+  background: #1c2240;
+  font-size: 12px;
+  text-align: left;
+}
+/* buttons */
+.btn {
+  width: 40%;
+  margin: auto;
+  height: 1.25rem;
+  border: none;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 159, 96, 1) 0%,
+    rgba(252, 91, 96, 1) 50%,
+    rgba(152, 59, 125, 1) 100%
+  );
+}
+.nav-btn {
+  width: 100%;
+  height: 2rem;
+  font-size: 1rem;
+  padding: 0 2rem;
+  border: none;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 159, 96, 1) 0%,
+    rgba(252, 91, 96, 1) 50%,
+    rgba(152, 59, 125, 1) 100%
+  );
+}
+
+
+

@@ -1,25 +1,25 @@
 import React from 'react'
-import '../../coinSummary.css';
+import Context from '../container/CoinContext';
+import { useContext } from 'react';
+import cs from'../../styles/CoinSummary.module.css';
 
-const CoinSummary = ({name, image, symbol, price, priceChange, volume, marketcap}) => {
-    
+const CoinSummary = ({ coinData }) => {
+    const coinContext = useContext(Context);
     return (
-        <div className="coin-container">
-            <div className="coin-summary__row">
-                <div className="coin">
-                    <img src={image} alt="crytpto logo" />
-                    <h1>{name}</h1>
-                    <p className="coin-summary__symbol">{symbol}</p>
+        <div className={cs.container}>
+            <div className={cs.row}>
+                <div className={cs.coinType}>
+                    <img src={coinData.image} alt="crytpto logo" />
+                    <h4>{coinData.name}</h4>
+                    
                 </div>
-                <div className="coin-summary__data">
-                    <p className="coin-summary__price">{price}</p>
-                    <p className="coin-summary__volume">${volume.toLocaleString()}</p>
-                    {priceChange < 0 ? (
-                        <p className="p.coin-percent red">{priceChange.toFixed(2)}%</p> 
-                        ) : ( <p className="p.coin-percent green">{priceChange.toFixed(2)}%</p>)}
-                        <p className="coin-summary__marketcap">
-                            Mkt Cap: ${marketcap.toLocaleString()}
-                        </p>
+                <div className={cs.data}>
+                <p className={cs.symbol}>{coinData.symbol}</p>
+                    <p className={cs.price}>${coinData.current_price}</p>
+                    {coinData.price_change_percentage_24h < 0 ? (
+                        <p className={`${cs.percent} ${cs.red}`}>{coinData.price_change_percentage_24h.toFixed(2)}%</p>
+                    ) : (<p className={`${cs.percent} ${cs.green}`}>{coinData.price_change_percentage_24h.toFixed(2)}%</p>)}
+                    <button className={cs.btn} onClick={() => coinContext.addToWatchlist(coinData)}>+</button>
                 </div>
             </div>
         </div>

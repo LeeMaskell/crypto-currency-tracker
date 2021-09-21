@@ -1,7 +1,7 @@
 import React from 'react';
 import { useContext, useState } from 'react';
 import Context from '../container/CoinContext';
-import '../../Bitcoin.css';
+import '../../styles/Bitcoin.css';
 
 const Bitcoin = () => {
     const coinContext = useContext(Context); // imported from CoinContext.js

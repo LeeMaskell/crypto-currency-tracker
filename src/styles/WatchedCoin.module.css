@@ -1,0 +1,80 @@
+.container {
+  display: flex;
+  justify-content: center;
+  /* width: 90%; */
+}
+.stickyHeading {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background-color: #1c2240;
+  padding-top: 1rem;
+}
+.text {
+  text-align: center;
+  /* margin-top: 1rem; */
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-items: start;
+  align-items: center;
+  height: 50px;
+  border-bottom: 1px solid #c6c6c6;
+  width: 95%;
+}
+.coinType {
+  display: flex;
+  align-items: center;
+  padding-right: 24px;
+  min-width: 300px;
+  color: #fff;
+}
+.coinType img {
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+}
+.coinType h4 {
+  font-size: 12px;
+  width: 150px;
+}
+.symbol {
+  text-transform: uppercase;
+  background: #1c2240;
+  font-size: 12px;
+  color: grey;
+}
+.data {
+  display: flex;
+  text-align: left;
+  justify-content: space-around;
+  width: 100%;
+}
+.price {
+  width: 110px;
+  font-size: 14px;
+  text-align: left;
+  color: white;
+}
+.percent {
+  width: 80px;
+}
+.red {
+  color: red;
+}
+.green {
+  color: green;
+}
+.btn {
+  border: none;
+  width: 1.25rem;
+  border-radius: 50%;
+  color: black;
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 159, 96, 1) 0%,
+    rgba(252, 91, 96, 1) 50%,
+    rgba(152, 59, 125, 1) 100%
+  );
+}

@@ -1,30 +1,22 @@
-import './App.css';
+import './styles/App.css';
 import { HashRouter, Route } from "react-router-dom";
 import MarketSummary from './components/presentational/MarketSummary';
 import { CoinProvider } from './components/container/CoinContext';
-import Estimates from './components/presentational/Estimates';
-import HomeTemp from './components/presentational/HomeTemp';
-import Bitcoin from './components/presentational/Bitcoin';
+import PriceEstimate from './components/presentational/PriceEstimate';
+import Modelling from './components/presentational/Modelling';
+import Watchlist from './components/presentational/Watchlist';
 
 
 function App() {
   return (
-    <HashRouter basename='/'>
+    <div className="home">
       <CoinProvider>
-        <Route exact path='/'>
-          <HomeTemp />
-        </Route>
-        <Route path='/market-summary'>
-          <MarketSummary />
-        </Route>
-        <Route path='/estimates'>
-          <Estimates />
-        </Route>
-        <Route path='/bitcoin'>
-          <Bitcoin />
-        </Route>
+        <MarketSummary />
+        <PriceEstimate />
+        <Modelling />
+        <Watchlist />
       </CoinProvider>
-    </HashRouter>
+    </div>
   );
 }
 
