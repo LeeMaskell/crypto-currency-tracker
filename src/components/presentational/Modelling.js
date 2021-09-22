@@ -3,7 +3,7 @@ import { useContext, useState } from 'react';
 import Context from '../container/CoinContext';
 import ModellingCSS from'../../styles/Modelling.module.css';
 
-const Modelling = () => {
+const Modelling = ({hide}) => {
     const coinContext = useContext(Context); // imported from CoinContext.js
     console.log(coinContext); // check that the correct context data is being imported
 
@@ -19,7 +19,7 @@ const Modelling = () => {
         setEstimate((sell * purchaseQuantity) - (purchase * purchaseQuantity));
     }
     return (
-        <div className="modelling">
+        <div className={`modelling ${hide ? "hidePanelMobile" : ""}`}>
             <h1 className={ModellingCSS.text}>Modelling</h1>
             <div className={ModellingCSS.input}>
                 <form className={ModellingCSS.form} action="" >

@@ -3,7 +3,7 @@ import { useContext, useState } from 'react';
 import Context from '../container/CoinContext';
 import PE from '../../styles/PriceEstimate.module.css'
 
-const PriceEstimate = () => {
+const PriceEstimate = ({hide}) => {
 
     const coinContext = useContext(Context); // imported from CoinContext.js
     console.log(coinContext); // check that the correct context data is being imported
@@ -21,9 +21,10 @@ const PriceEstimate = () => {
         e.preventDefault();
         setCost(quantity * currencyChoice);
     }
+    
 
     return (
-        <div className="estimates">
+        <div className={`estimates ${hide ? "hidePanelMobile" : ""}`}>
             <h1 className={PE.text}>PRICE ESTIMATES</h1>
             <div className={PE.dataInput}>
                 <form className={PE.flexContainer}action="">

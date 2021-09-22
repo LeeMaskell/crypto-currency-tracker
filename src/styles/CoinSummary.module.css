@@ -16,8 +16,7 @@
 .coinType {
     display: flex;
     align-items: center;
-    /* padding-right: 10%; */
-    width: 20%;
+    width: 30%;
     color: #fff;
 }
 .coinType img {
@@ -28,6 +27,18 @@
 .coinType h4 {
     font-size: 12px;
     /* width: 150px; */
+}
+.priceFlex {
+    width: 30%;
+    text-align: left;
+}
+.percentageFlex {
+    width: 30%;
+    text-align: left;
+}
+.buttonFlex {
+    width: 10%;
+    text-align: left;
 }
 .symbol {
     text-transform: uppercase;
@@ -69,3 +80,19 @@
   );
 }
 
+@media only screen and (max-width: 850px) {
+    .symbol {
+        display: none;
+    }
+    .name, .price, .percent {
+        font-size: 0.75rem;
+    }
+    .coinType {
+        margin-right: 2rem;
+    }
+    .coinType img {
+        height: 15px;
+        width: 15px;
+        margin-right: 5px;
+    }
+}

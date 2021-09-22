@@ -4,10 +4,10 @@ import Context from '../container/CoinContext';
 import WatchedCoin from './WatchedCoin';
 import WC from '../../styles/WatchedCoin.module.css';
 
-const Watchlist = () => {
+const Watchlist = ({hide}) => {
     const coinContext = useContext(Context);
     return (
-        <div className="watchlist">
+        <div className={`watchlist ${hide ? "hidePanelMobile" : ""}`}>
             <div className={WC.stickyHeading}>
                 <h1 className={WC.text}>WATCHLIST</h1>
             </div>

@@ -3,7 +3,7 @@ import CoinSummary from './CoinSummary';
 import ms from'../../styles/MarketSummary.module.css';
 import Context from '../container/CoinContext';
 
-const MarketSummary = () => {
+const MarketSummary = ({hide}) => {
     const coinContext = useContext(Context); // imported from CoinContext.js
     // console.log(coinContext); // check that the correct context data is being imported
     const [search, setSearch] = useState('');
@@ -19,7 +19,7 @@ const MarketSummary = () => {
     };
 
     return (
-        <div className="market-summary">
+        <div className={`market-summary ${hide ? "hidePanelMobile" : ""}`}>
                 <div className={ms.searchContainer}>
                     <h1 className={ms.heading}>SEARCH CURRENCIES</h1>
                     <form action="">

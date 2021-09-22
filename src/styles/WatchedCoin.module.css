@@ -26,9 +26,9 @@
 .coinType {
   display: flex;
   align-items: center;
-  padding-right: 24px;
-  min-width: 300px;
+  width: 30%;
   color: #fff;
+  margin-right: 2rem;
 }
 .coinType img {
   height: 30px;
@@ -38,6 +38,18 @@
 .coinType h4 {
   font-size: 12px;
   width: 150px;
+}
+.priceFlex {
+  width: 30%;
+  text-align: left;
+}
+.percentageFlex {
+  width: 30%;
+  text-align: left;
+}
+.buttonFlex {
+  width: 10%;
+  text-align: left;
 }
 .symbol {
   text-transform: uppercase;

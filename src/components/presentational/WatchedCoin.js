@@ -3,7 +3,7 @@ import WC from '../../styles/WatchedCoin.module.css';
 import Context from '../container/CoinContext';
 import { useContext } from 'react';
 
-const WatchedCoin = ({coin}) => {
+const WatchedCoin = ({ coin }) => {
     const coinContext = useContext(Context);
     return (
         <div className={WC.container}>
@@ -11,19 +11,22 @@ const WatchedCoin = ({coin}) => {
                 <div className={WC.coinType}>
                     <img src={coin.image} alt="crytpto logo" />
                     <h4>{coin.name}</h4>
-                    <p className={WC.symbol}>{coin.symbol}</p>
+                    {/* <p className={WC.symbol}>{coin.symbol}</p> */}
                 </div>
-                <div className={WC.data}>
+                <div className={WC.priceFlex}>
                     <p className={WC.price}>${coin.current_price}</p>
+                </div>
+                <div className={WC.percentageFlex}>
                     {coin.price_change_percentage_24h < 0 ? (
                         <p className={`${WC.percent} ${WC.red}`}>{coin.price_change_percentage_24h.toFixed(2)}%</p>
                     ) : (<p className={`${WC.percent} ${WC.green}`}>{coin.price_change_percentage_24h.toFixed(2)}%</p>)}
+                </div>
+                <div className={WC.buttonFlex}>
                     <button className={WC.btn} onClick={() => coinContext.removeFromWatchlist(coin)}>-</button>
                 </div>
             </div>
-
-            
         </div>
+
     )
 }
 
