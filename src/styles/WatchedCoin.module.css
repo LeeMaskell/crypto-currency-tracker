@@ -30,24 +30,24 @@
   color: #fff;
   margin-right: 2rem;
 }
-.coinType img {
+img {
   height: 30px;
   width: 30px;
   margin-right: 10px;
 }
-.coinType h4 {
+h4 {
   font-size: 12px;
   width: 150px;
 }
-.priceFlex {
+.priceContainer {
   width: 30%;
   text-align: left;
 }
-.percentageFlex {
+.percentageContainer {
   width: 30%;
   text-align: left;
 }
-.buttonFlex {
+.removeBtnConatainer {
   width: 10%;
   text-align: left;
 }

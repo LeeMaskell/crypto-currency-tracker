@@ -1,7 +1,7 @@
 import React from 'react'
 import { useContext, useState } from 'react';
 import Context from '../container/CoinContext';
-import PE from '../../styles/PriceEstimate.module.css'
+import PeCSS from '../../styles/PriceEstimate.module.css'
 
 const PriceEstimate = ({hide}) => {
 
@@ -13,7 +13,7 @@ const PriceEstimate = ({hide}) => {
     const [quantity, setQuantity] = useState(null);
     const [cost, setCost] = useState(null);
 
-    const test = (e) => {
+    const conversion  = (e) => {
         console.log(e.target.value);
         setCurrencyChoice(e.target.value)
     }
@@ -25,11 +25,11 @@ const PriceEstimate = ({hide}) => {
 
     return (
         <div className={`estimates ${hide ? "hidePanelMobile" : ""}`}>
-            <h1 className={PE.text}>PRICE ESTIMATES</h1>
-            <div className={PE.dataInput}>
-                <form className={PE.flexContainer}action="">
-                        <label htmlFor="" className={PE.label}>Currency</label>
-                        <select className={PE.select} name="currency" id="currency" value={currencyChoice} onChange={test}>
+            <h1 className={PeCSS.text}>PRICE ESTIMATES</h1>
+            <div className={PeCSS.dataInput}>
+                <form className={PeCSS.flexContainer}action="">
+                        <label htmlFor="" className={PeCSS.label}>Currency</label>
+                        <select className={PeCSS.select} name="currency" id="currency" value={currencyChoice} onChange={conversion}>
                             <option disabled selected value> -- select an option -- </option>
                             {
                                 coinContext.coins.map(item => {
@@ -37,15 +37,15 @@ const PriceEstimate = ({hide}) => {
                                 })
                             }
                         </select>
-                    <label className={PE.label}>Quantity</label>
-                    <input className={PE.input} placeholder="enter quantity" type="text" id="quantity" name="quantity" value={quantity} onChange={(e) => setQuantity(e.target.value)} />
+                    <label className={PeCSS.label}>Quantity</label>
+                    <input className={PeCSS.input} placeholder="enter quantity" type="text" id="quantity" name="quantity" value={quantity} onChange={(e) => setQuantity(e.target.value)} />
                 </form>
             </div>
             
-            <div className={PE.costDisplay}>
-            <button className={PE.btn} onClick={costCalculator}>Calculate Cost</button>
-                <h4 className={PE.white}>(CURRENT UNIT PRICE: ${currencyChoice})</h4>
-                <h2 className={PE.white}>COST ESTIMATE: ${cost} AUD</h2>
+            <div className={PeCSS.costDisplay}>
+            <button className={PeCSS.btn} onClick={costCalculator}>Calculate Cost</button>
+                <h4 className={PeCSS.white}>(CURRENT UNIT PRICE: ${currencyChoice})</h4>
+                <h2 className={PeCSS.white}>COST ESTIMATE: ${cost} AUD</h2>
             </div>
         </div>
     )

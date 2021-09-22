@@ -1,6 +1,6 @@
 import { useState, useContext } from 'react';
 import CoinSummary from './CoinSummary';
-import ms from'../../styles/MarketSummary.module.css';
+import MsCSS from'../../styles/MarketSummary.module.css';
 import Context from '../container/CoinContext';
 
 const MarketSummary = ({hide}) => {
@@ -20,12 +20,12 @@ const MarketSummary = ({hide}) => {
 
     return (
         <div className={`market-summary ${hide ? "hidePanelMobile" : ""}`}>
-                <div className={ms.searchContainer}>
-                    <h1 className={ms.heading}>SEARCH CURRENCIES</h1>
+                <div className={MsCSS.searchContainer}>
+                    <h1 className={MsCSS.heading}>SEARCH CURRENCIES</h1>
                     <form action="">
-                        <input type="text" placeholder="enter currency" className={ms.input} onChange={handleChange} />
+                        <input type="text" placeholder="enter currency" className={MsCSS.input} onChange={handleChange} />
                     </form>
-                    <button className={ms.btn} onClick={handleConversion}>{coinContext.currency ? 'Convert to $USD' : 'Convert to $AUD'}</button>
+                    <button className={MsCSS.btn} onClick={handleConversion}>{coinContext.currency ? 'Convert to $USD' : 'Convert to $AUD'}</button>
                 </div>
                 {filteredCoins.map(coin => {
                     return (

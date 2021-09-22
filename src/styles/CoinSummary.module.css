@@ -44,15 +44,15 @@ h2:hover {
     text-decoration: underline;
     cursor: pointer;
 }
-.priceFlex {
+.priceContainer {
     width: 30%;
     text-align: left;
 }
-.percentageFlex {
+.percentageContainer {
     width: 30%;
     text-align: left;
 }
-.buttonFlex {
+.addButtonContainer {
     width: 10%;
     text-align: left;
 }
@@ -61,13 +61,13 @@ h2:hover {
     color: white;
     padding-left: 1rem;
 }
-.displayFlex {
+.flexItem {
     width: 20%;
     text-align: right;
     color: grey;
     font-size: 0.75rem;
 }
-.mktCapConatainer {
+.mktCapFlexItem {
     width: 30%;
     color: grey;
     font-size: 0.75rem;

@@ -1,5 +1,5 @@
 import React from 'react';
-import Nav from '../../styles/Navbar.module.css';
+import NavbarCSS from '../../styles/Navbar.module.css';
 import { useState } from 'react';
 
 const Navbar = ({ hideFunction }) => {
@@ -10,31 +10,31 @@ const Navbar = ({ hideFunction }) => {
     }
 
     return (
-        <nav className={Nav.navbar}>
-            <div className={Nav.flexContainer}>
-                <div className={Nav.icon} onClick={() => setShow(!show)}>&#9776;</div>
+        <nav className={NavbarCSS.navbar}>
+            <div className={NavbarCSS.flexContainer}>
+                <div className={NavbarCSS.icon} onClick={() => setShow(!show)}>&#9776;</div>
             </div>
-            <div className={show ? `${Nav.navLink} ${Nav.showLink}` : `${Nav.navLink}`} >
+            <div className={show ? `${NavbarCSS.navLink} ${NavbarCSS.showLink}` : `${NavbarCSS.navLink}`} >
                 <ul>
-                    <li className={Nav.item} onClick={() => navbarLogic({
+                    <li className={NavbarCSS.item} onClick={() => navbarLogic({
                         MarketSummary: false,
                         PriceEstimate: true,
                         Modelling: true,
                         Watchlist: true
                     })}>Market Summary</li>
-                    <li className={Nav.item} onClick={() => navbarLogic({
+                    <li className={NavbarCSS.item} onClick={() => navbarLogic({
                         MarketSummary: true,
                         PriceEstimate: false,
                         Modelling: true,
                         Watchlist: true
                     })}>Price Estimates</li>
-                    <li className={Nav.item} onClick={() => navbarLogic({
+                    <li className={NavbarCSS.item} onClick={() => navbarLogic({
                         MarketSummary: true,
                         PriceEstimate: true,
                         Modelling: false,
                         Watchlist: true
                     })}>Modelling</li>
-                    <li className={Nav.item} onClick={() => navbarLogic({
+                    <li className={NavbarCSS.item} onClick={() => navbarLogic({
                         MarketSummary: true,
                         PriceEstimate: true,
                         Modelling: true,

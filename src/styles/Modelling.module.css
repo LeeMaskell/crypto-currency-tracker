@@ -25,6 +25,9 @@ input {
   height: 1.5rem;
   margin-top: 1rem;
 }
+input:focus {
+  outline: none;
+}
 select {
   background-color: #141933;
   color: #dddddd;
@@ -74,4 +77,7 @@ label {
 .green {
   color: green;
   text-align: center;
+}
+.white {
+  color: white;
 }

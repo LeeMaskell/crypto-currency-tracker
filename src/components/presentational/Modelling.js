@@ -24,15 +24,15 @@ const Modelling = ({hide}) => {
             <div className={ModellingCSS.input}>
                 <form className={ModellingCSS.form} action="" >
                     
-                        <label className="white">Purchase Quantity</label>
-                        <input  placeholder="enter quantity" type="text" id="purchaseQuantity" name="purchaseQuantity" value={purchaseQuantity} onChange={(e) => setPurchaseQuantity(e.target.value)} />
+                        <label className={ModellingCSS.white}>Purchase Quantity</label>
+                        <input  placeholder="enter quantity" type="number" id="purchaseQuantity" name="purchaseQuantity" value={purchaseQuantity} onChange={(e) => setPurchaseQuantity(e.target.value)} />
                    
                    
-                        <label className="white">Value on Purchase</label>
-                        <input  placeholder="enter value" type="text" id="purchasePrice" name="purchasePrice" value={purchase} onChange={(e) => setPurchase(e.target.value)} />
+                        <label className={ModellingCSS.white}>Value on Purchase</label>
+                        <input  placeholder="enter value" type="number" id="purchasePrice" name="purchasePrice" value={purchase} onChange={(e) => setPurchase(e.target.value)} />
                    
-                        <label className="white">Estimated Total Sale Value</label>
-                        <input  placeholder="enter value" type="text" id="sellPrice" name="sellPrice" value={sell} onChange={(e) => setSell(e.target.value)} />
+                        <label className={ModellingCSS.white}>Estimated Total Sale Value</label>
+                        <input  placeholder="enter value" type="number" id="sellPrice" name="sellPrice" value={sell} onChange={(e) => setSell(e.target.value)} />
                    
 
                 </form>

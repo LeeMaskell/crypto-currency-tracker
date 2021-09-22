@@ -8,7 +8,6 @@ import Watchlist from './components/presentational/Watchlist';
 import Navbar from './components/presentational/Navbar';
 import {useState } from 'react';
 
-
 function App() {
   // const pagesToHideMobile = 
   const [pagesToHideMobile, setPagesToHide] = useState({MarketSummary: false, 
