@@ -4,6 +4,11 @@
     width: 90%;
     
 }
+.contentFlex {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
 .row {
     display: flex;
     flex-direction: row;
@@ -13,13 +18,16 @@
     border-bottom: 1px solid #C6C6C6;
     width: 100%;
 }
+.noRow {
+    display: none;
+}
 .coinType {
     display: flex;
     align-items: center;
     width: 30%;
     color: #fff;
 }
-.coinType img {
+img {
     height: 30px;
     width: 30px;
     margin-right: 10px;
@@ -27,6 +35,14 @@
 .coinType h4 {
     font-size: 12px;
     /* width: 150px; */
+}
+h4:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+h2:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 .priceFlex {
     width: 30%;
@@ -39,6 +55,23 @@
 .buttonFlex {
     width: 10%;
     text-align: left;
+}
+.closeBtn {
+    width: 5%;
+    color: white;
+    padding-left: 1rem;
+}
+.displayFlex {
+    width: 20%;
+    text-align: right;
+    color: grey;
+    font-size: 0.75rem;
+}
+.mktCapConatainer {
+    width: 30%;
+    color: grey;
+    font-size: 0.75rem;
+    text-align: center;
 }
 .symbol {
     text-transform: uppercase;
@@ -79,8 +112,16 @@
     rgba(152, 59, 125, 1) 100%
   );
 }
-
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 1100px) {
+    .mktCapConatainer {
+        display: none;
+    }
+    .displayFlex {
+        width: 30%;
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 1050px) {
     .symbol {
         display: none;
     }
